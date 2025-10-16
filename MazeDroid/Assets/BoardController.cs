@@ -2,26 +2,35 @@ using UnityEngine;
 
 public class BoardController : MonoBehaviour
 {
-    public float rotationSpeed = 50f;
-    public float maxRotation = 10f;
+    public float rotationSpeed = 5f;   // Sanfte Rotation
+    public float maxRotation = 10f;    // Maximalwinkel
+
+    private Quaternion initialRotation;
+
     void Start()
     {
-        transform.localEulerAngles = Vector3.zero;
+        initialRotation = transform.rotation;
+
+        // Rigidbody auf Map hinzufügen, falls nicht vorhanden
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb == null)
+        {
+            rb = gameObject.AddComponent<Rigidbody>();
+        }
+        rb.isKinematic = true;
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous; // schnelle Bewegungen
     }
 
     void FixedUpdate()
     {
-        float rotationX = Input.GetAxis("Vertical") * rotationSpeed * Time.fixedDeltaTime;
-        float rotationZ = Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime;
+        float inputX = Input.GetAxis("Vertical");
+        float inputZ = Input.GetAxis("Horizontal");
 
-        Vector3 currentRotation = transform.localEulerAngles;
-        currentRotation.x = (currentRotation.x > 180) ? currentRotation.x - 360 : currentRotation.x;
-        currentRotation.z = (currentRotation.z > 180) ? currentRotation.z - 360 : currentRotation.z;
+        float targetX = Mathf.Clamp(inputX * maxRotation, -maxRotation, maxRotation);
+        float targetZ = Mathf.Clamp(inputZ * maxRotation, -maxRotation, maxRotation);
 
-        float newRotationX = Mathf.Clamp(currentRotation.x + rotationX, -maxRotation, maxRotation);
-        float newRotationZ = Mathf.Clamp(currentRotation.z - rotationZ, -maxRotation, maxRotation);
+        Quaternion targetRotation = initialRotation * Quaternion.Euler(targetX, 0f, targetZ);
 
-        transform.localEulerAngles = new Vector3(newRotationX, 0f, newRotationZ);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
     }
-
 }
