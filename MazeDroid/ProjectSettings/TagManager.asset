@@ -7,6 +7,8 @@ TagManager:
   - KnopfZone
   - Ball
   - Door1
+  - Knopf2
+  - Door2
   layers:
   - Default
   - TransparentFX
