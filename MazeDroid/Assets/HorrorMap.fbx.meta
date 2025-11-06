@@ -1,0 +1,729 @@
+fileFormatVersion: 2
+guid: b15becdc76aa931499b5b09d0d1c2da3
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grasboden
+    second: {fileID: 2100000, guid: c5b9ff208580a564ba1bbb6d4c78f6bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoneWall
+    second: {fileID: 2100000, guid: afe9fdbe91b0a8e4e8c97583c619c046, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer
+    second: {fileID: 2100000, guid: 165f36d352234af43aed28518f62660d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.001
+    second: {fileID: 2100000, guid: 6f29bcf78762139489b1d709ba1c7fd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.002
+    second: {fileID: 2100000, guid: b0c32a29b55c7be4d8719b7ebb3e8297, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.003
+    second: {fileID: 2100000, guid: 0c7c6a757ed8bbe4ab25fa813f05c55b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.004
+    second: {fileID: 2100000, guid: f76eb221bf40e6541ba6f0415b1a49c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.005
+    second: {fileID: 2100000, guid: ff39a2b806bc4a84797a7b0b27b626d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.006
+    second: {fileID: 2100000, guid: 1c5e392f17c9aa94282144944bb9ba5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.007
+    second: {fileID: 2100000, guid: b67d1f05c93e27f4c90908280be69bf3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.008
+    second: {fileID: 2100000, guid: 2101553b4c5931644abb62fb8396eeaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.009
+    second: {fileID: 2100000, guid: 6d447ccf6cce7224b92817337d635feb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.010
+    second: {fileID: 2100000, guid: 850507dc6296e0843805fdd3bee7c194, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.011
+    second: {fileID: 2100000, guid: 0c8433cd2b25f95489b12e00190fe6c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.012
+    second: {fileID: 2100000, guid: 665aa673eee9dda4ea6c3f1c9a93767d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.013
+    second: {fileID: 2100000, guid: 7d8aaa379efa7364e954f87cd1e49180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.014
+    second: {fileID: 2100000, guid: c33c6eca1864084439bc2792e737f972, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.015
+    second: {fileID: 2100000, guid: 9831ef0be6f75864eaf1dcbf4c2b0a60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.016
+    second: {fileID: 2100000, guid: d2c22247ca0391b4b94acf590bcabef4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.017
+    second: {fileID: 2100000, guid: 9200fb971507ef14b852fb4b99f4d2fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.018
+    second: {fileID: 2100000, guid: 996318738ed910f4f996d0882d6788b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.019
+    second: {fileID: 2100000, guid: d2c8ac7fe8d697249a513c04e004f392, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.020
+    second: {fileID: 2100000, guid: 0d644cf2971b8e848b43556619eb54de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.021
+    second: {fileID: 2100000, guid: 04aa736ebf076e4449490f2b736d1c68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.022
+    second: {fileID: 2100000, guid: d74e390f30f33ac4aab1a1afea493bdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.023
+    second: {fileID: 2100000, guid: 3535427eed8004542a0dc08898ad3256, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.024
+    second: {fileID: 2100000, guid: d3e1fe8876ba02e44bf805e93c5e3ac2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.025
+    second: {fileID: 2100000, guid: ae24d65e2f1a4ed40b600a2a2a7d2c55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.026
+    second: {fileID: 2100000, guid: 7c2f020fe09ca314b8d01b49a8f222e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.027
+    second: {fileID: 2100000, guid: 909d8277a364df84c94914e6f7f536cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.028
+    second: {fileID: 2100000, guid: c03584c1ed8b1ea40bf3608bd4d85684, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.029
+    second: {fileID: 2100000, guid: 784bb4c4906c5264fa7d3c5e678fc862, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.030
+    second: {fileID: 2100000, guid: b6563e84fd666ce43bb96910506e4e13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.031
+    second: {fileID: 2100000, guid: 143f8940b3ff26643ac30c2510f1db44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.032
+    second: {fileID: 2100000, guid: 645e95e639e3fa1468f310380a54c660, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.033
+    second: {fileID: 2100000, guid: 4fc24d10064b87a41ab80b6ce80d2cdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.034
+    second: {fileID: 2100000, guid: 1ca5c53d0a1c60442abb93235e478574, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.035
+    second: {fileID: 2100000, guid: 078bbc2615255184f898f362613e56e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.036
+    second: {fileID: 2100000, guid: 2601e00ff07d3104d9eed6fb69d74157, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.037
+    second: {fileID: 2100000, guid: 8ec4d7e84688f7345ae31d758d142a62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.038
+    second: {fileID: 2100000, guid: cb4e4f2cea416654aa0ff92a81cb0310, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_feuer.039
+    second: {fileID: 2100000, guid: 0456a09ecc8833a4db082ea5148faa32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.001
+    second: {fileID: 2100000, guid: 755ffdab572012d459c5fd1cff9ebad7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.002
+    second: {fileID: 2100000, guid: 871f952b49c4a05468cf2267737910f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.003
+    second: {fileID: 2100000, guid: 4de341bf604362649b2f80544f26982b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.004
+    second: {fileID: 2100000, guid: bdf181c969155634b938845f0f6e0f1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.005
+    second: {fileID: 2100000, guid: e6f9b02316f43d5409e1089aff40fc22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.006
+    second: {fileID: 2100000, guid: 0a5c2e00fb1372c4f87e6c6125850986, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.007
+    second: {fileID: 2100000, guid: 77b89d1b9b6e03648beef79100c7a545, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.008
+    second: {fileID: 2100000, guid: dc8f7ddd7e05e4a47905f9dd197a4dde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.009
+    second: {fileID: 2100000, guid: 8f79f06e32ea08146bfe17f88844a2e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.010
+    second: {fileID: 2100000, guid: cf84e70dac3de5c4b9c046d78989220e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.011
+    second: {fileID: 2100000, guid: 9e2f9a00ba74cd64eb20b1ee9bd0e6ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.012
+    second: {fileID: 2100000, guid: 9716e7e4ee284db47bb1ae498f51e46b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.013
+    second: {fileID: 2100000, guid: 30c7fe541dd662b498b82713af95920e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.014
+    second: {fileID: 2100000, guid: 161a517f8d561ce498fc4f8de9a848fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.015
+    second: {fileID: 2100000, guid: 68ca4e60f1e5dab45be95239cc94ce65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.016
+    second: {fileID: 2100000, guid: 626ade4f30630364c94aa9e5d4298000, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.017
+    second: {fileID: 2100000, guid: d7a5cfc271525f34581dbc1e203421c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.018
+    second: {fileID: 2100000, guid: 24eb5a54d6ac709438068c9afa9f811b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.019
+    second: {fileID: 2100000, guid: 46d7da0d4c2972643bc39b8491bd2852, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.020
+    second: {fileID: 2100000, guid: a9eee0b03e4601c4290ade5eb43201bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.021
+    second: {fileID: 2100000, guid: 50d6130ef8f6f0046a46302623d44db3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.022
+    second: {fileID: 2100000, guid: 668884082dcb2fa48a4d699084d71d17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.023
+    second: {fileID: 2100000, guid: b1668d04ebd68bb4fadf06439e4df427, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.024
+    second: {fileID: 2100000, guid: 3700f6b3915173d4ab57422c737f3776, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.025
+    second: {fileID: 2100000, guid: b597874893be2aa4983fbed9b5df4d35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.026
+    second: {fileID: 2100000, guid: 1b4bbc4884ad3134ebcd434b4d4a7bb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.027
+    second: {fileID: 2100000, guid: bbef1a5e7e901a7479b318dd6a443c46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.028
+    second: {fileID: 2100000, guid: cd925d5040d606f4798d9f12052b3200, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.029
+    second: {fileID: 2100000, guid: 9dbf6c338c5072e4e93a052fc5d110ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.030
+    second: {fileID: 2100000, guid: d76d29352eb04de47a1cea32c17d8799, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.031
+    second: {fileID: 2100000, guid: c603385a058e9f347beffa5c4f8d5fb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.032
+    second: {fileID: 2100000, guid: a18d5b45421df06488183ba5725eb568, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.033
+    second: {fileID: 2100000, guid: 1faa9647fb07c9a4c90fbbf6310c333d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.034
+    second: {fileID: 2100000, guid: 9a1ac350dd3bb1447a11a4b360e973b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.035
+    second: {fileID: 2100000, guid: 93e7cc316a18ab044b0679cd3faf8e77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.036
+    second: {fileID: 2100000, guid: 56304a98f21b33c4eb3ac72686ac9c3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.037
+    second: {fileID: 2100000, guid: d507e5b429eb8e943a67f6a56ebdede5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.038
+    second: {fileID: 2100000, guid: 0e4207433f71a084cb7bb30b6af26a2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.039
+    second: {fileID: 2100000, guid: 5c6a2f0082b6df940b3c4d9e05002f44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_holz.040
+    second: {fileID: 2100000, guid: 54234543cba666c498c03c94f4e6041c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall
+    second: {fileID: 2100000, guid: b604f0cd0855cc04da87554c44d0d87c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.001
+    second: {fileID: 2100000, guid: 6d2ba1c6a5ee21a4dbfeceea6abd1119, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.002
+    second: {fileID: 2100000, guid: 12283e65418b10943aa8fc9dfa4f5827, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.003
+    second: {fileID: 2100000, guid: fa61f6e604127fd4bb8846328829e464, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.004
+    second: {fileID: 2100000, guid: 5c76878c4284cc34993404f4fa20c79f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.005
+    second: {fileID: 2100000, guid: 0f8625c5f8da44c49bef8d5fb9845924, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.006
+    second: {fileID: 2100000, guid: d332ce3066d28bd47917b915fb2179dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.007
+    second: {fileID: 2100000, guid: 39820be028ba05340a5dc9f4ebd24c9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.008
+    second: {fileID: 2100000, guid: 3e5dd688a4a96704c888cd85f639d48c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.009
+    second: {fileID: 2100000, guid: 46fad205b8a2dc34e9f5ae563633cb10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.010
+    second: {fileID: 2100000, guid: 70844b6a0828ac0459be6fa53e6007a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.011
+    second: {fileID: 2100000, guid: fcd9a58fc8f49f940b79c1191dee1539, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.012
+    second: {fileID: 2100000, guid: 243ceef0140fe704fa563e92daf6910c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.013
+    second: {fileID: 2100000, guid: c9811f6980a391c4da507d2e99a3d3db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.014
+    second: {fileID: 2100000, guid: 4b55781783c575549b0ab6bed619e1b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.015
+    second: {fileID: 2100000, guid: 9606d5f85f9e16841a664e59536b6df6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.016
+    second: {fileID: 2100000, guid: a873aca7b96771948a5d819312fb8c30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.017
+    second: {fileID: 2100000, guid: e0dabb663ea4ea84d9ca0a4fcf5d67fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.018
+    second: {fileID: 2100000, guid: 3617090082894a049b434bd12f19b04f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.019
+    second: {fileID: 2100000, guid: 63a3d7901de1713448926d9f51f40401, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.020
+    second: {fileID: 2100000, guid: f751c140077e6714ba2182e7a47aeceb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.021
+    second: {fileID: 2100000, guid: 22fb75e5998b4254198ab8e4cc38359f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.022
+    second: {fileID: 2100000, guid: 8fd8dee208d314440959133bff62c73d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.023
+    second: {fileID: 2100000, guid: 946e38a11ed9217408927b7fc9582a8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.024
+    second: {fileID: 2100000, guid: d42c85b3bf84d7243a06b4ddda6ed606, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.025
+    second: {fileID: 2100000, guid: 2aa8b5c94d642f2419e3e1e6428f2bb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.026
+    second: {fileID: 2100000, guid: dde9f125a3176354e8af59ea106a4264, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.027
+    second: {fileID: 2100000, guid: 3ab6a8733157b5f45a0bc8484b7d4c1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.028
+    second: {fileID: 2100000, guid: b3330ea421852a346b728f16c27d5e0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.029
+    second: {fileID: 2100000, guid: 33c5062e0379f9946b2d9cc18ca6d886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.030
+    second: {fileID: 2100000, guid: ca5b8cd039ef4844793eb263ed7c56b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.031
+    second: {fileID: 2100000, guid: 27fe56e2a7691424f8c989f3bb4d6687, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.032
+    second: {fileID: 2100000, guid: 2e8375f0d23926948ba4dcefe445a67a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.033
+    second: {fileID: 2100000, guid: 2f75c7f0844aa104abf9e408ea10b7da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.034
+    second: {fileID: 2100000, guid: 3cd38fa461ff3e248b7061d34c7c37e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.035
+    second: {fileID: 2100000, guid: 0a914c70ce4c85b499159b6b5629b60b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.036
+    second: {fileID: 2100000, guid: 7ec9e3e998d823c41b63be6edbdab763, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.037
+    second: {fileID: 2100000, guid: 9932e9c64f82a6e478f638d674cbd6fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.038
+    second: {fileID: 2100000, guid: 5781dad182ad6ef4db35b3df42829ab2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fackel_metall.039
+    second: {fileID: 2100000, guid: 2457f9acc92c2fe4095782af1b61949d, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DeWatermark.ai_1760610231217
+    second: {fileID: 2800000, guid: ccca5a0f796771442b5c6f0644402136, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rocky_terrain_diff_4k
+    second: {fileID: 2800000, guid: 01e354599ee5c594191f79e5bafe4c67, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
