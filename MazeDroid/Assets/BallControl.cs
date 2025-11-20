@@ -66,7 +66,10 @@ public class BallRespawn : MonoBehaviour
             // Neuen Ball am Spawnpoint erzeugen
             if (ballPrefab != null && spawnPoint != null)
             {
-                Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
+                GameObject go = Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
+                Camera.main.GetComponent<CameraController>().ball = go;
+                Camera.main.GetComponent<CameraController>().zRotation = 0.0f;
+
             }
             else
             {
