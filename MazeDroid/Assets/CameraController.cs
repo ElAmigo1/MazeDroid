@@ -7,31 +7,24 @@ public class CameraController : MonoBehaviour
     public GameObject ball;
     public Vector3 offset;
     public float zRotation;
-    // Start is called before the first frame update
+    public float followSpeed = 5f;  // Smooth Follow Geschwindigkeit
+
     void Start()
     {
-        
+        // Startposition setzen
+        transform.position = ball.transform.position + offset;
+        transform.rotation = Quaternion.Euler(90f, 180f, -180f); // statische Rotation
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        zRotation = Mathf.Clamp(zRotation, -90.0f, 90.0f);
-        //Quaternion.SetFromToRotation
-        //Vector3.RotateTowards
+        // Zielposition nur für X, Y, Z (Offset vom Ball)
+        Vector3 targetPosition = ball.transform.position + offset;
 
+        // Smooth Follow (ohne Rotation um den Ball)
+        transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
 
-        //this.transform.position = ball.transform.position + Quaternion.AngleAxis(zRotation, new Vector3(0.0f, 1.0f, 0.0f)) * offset;
-        //this.transform.rotation = Quaternion.LookRotation(ball.transform.position - transform.position);
-
-
-        this.transform.position = ball.transform.position + offset;
-        this.transform.rotation = Quaternion.LookRotation(ball.transform.position - transform.position);
-
-
-        //this.transform.position = new Vector3(
-        //ball.transform.position.x - offset,
-        //ball.transform.position.y,
-        //ball.transform.position.z);
+        // Kamera bleibt statisch orientiert
+        // transform.rotation wird hier nicht verändert
     }
 }

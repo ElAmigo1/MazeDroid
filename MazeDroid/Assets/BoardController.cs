@@ -37,28 +37,22 @@ public class BoardController : MonoBehaviour
 
         if (useGyro)
         {
-            // Gravity = Richtung der Schwerkraft relativ zum Gerät
             Vector3 g = Input.gyro.gravity;
 
-            // g.x: Kippung nach links/rechts
-            // g.y: Hoch/runter
-            // g.z: Vor/Zurück kippen
+            float sensitivity = 1.5f;
 
-            // Tablets liegen meist flacher: Achsen anpassen!        
-            float sensitivity = 3f;
+            // Landscape-Anpassung: Selfie-Kamera oben
+            // Links/Rechts Kippen -> Rotation um X-Achse
+            float rotX = -g.y;
+            // Vorwärts/Rückwärts Kippen -> Rotation um Z-Achse
+            float rotZ = g.x;
 
-            float gx = -g.x;
-            float gy = g.y;
+            // Smooth nonlinear response
+            rotX = Mathf.Sign(rotX) * Mathf.Pow(Mathf.Abs(rotX), 0.7f);
+            rotZ = Mathf.Sign(rotZ) * Mathf.Pow(Mathf.Abs(rotZ), 0.7f);
 
-            // Smooth nonlinear response (fühlt sich natürlicher an)
-            gx = Mathf.Sign(gx) * Mathf.Pow(Mathf.Abs(gx), 0.7f);
-            gy = Mathf.Sign(gy) * Mathf.Pow(Mathf.Abs(gy), 0.7f);
-
-            inputX = Mathf.Clamp(gx * sensitivity, -1f, 1f);
-            inputZ = Mathf.Clamp(gy * sensitivity, -1f, 1f);
-
-
-
+            inputX = Mathf.Clamp(rotX * sensitivity, -1f, 1f);
+            inputZ = Mathf.Clamp(rotZ * sensitivity, -1f, 1f);
         }
         else
         {
@@ -77,6 +71,7 @@ public class BoardController : MonoBehaviour
             rotationSpeed * Time.fixedDeltaTime
         );
     }
+
 
 
     /// <summary>
