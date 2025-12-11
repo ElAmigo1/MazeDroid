@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 
 public class BoardController : MonoBehaviour
 {
@@ -37,17 +37,31 @@ public class BoardController : MonoBehaviour
 
         if (useGyro)
         {
-            // Gyro liefert Orientierung in Gerätkoordinaten → muss angepasst werden
-            Quaternion deviceRotation = GyroToUnity(gyro.attitude);
-            Vector3 tilt = deviceRotation * Vector3.forward;
+            // Gravity = Richtung der Schwerkraft relativ zum Gerät
+            Vector3 g = Input.gyro.gravity;
 
-            // Wir lesen die Neigung (x/z) aus
-            inputX = Mathf.Clamp(tilt.x * 2f, -1f, 1f);
-            inputZ = Mathf.Clamp(tilt.z * 2f, -1f, 1f);
+            // g.x: Kippung nach links/rechts
+            // g.y: Hoch/runter
+            // g.z: Vor/Zurück kippen
+
+            // Tablets liegen meist flacher: Achsen anpassen!        
+            float sensitivity = 3f;
+
+            float gx = -g.x;
+            float gy = g.y;
+
+            // Smooth nonlinear response (fühlt sich natürlicher an)
+            gx = Mathf.Sign(gx) * Mathf.Pow(Mathf.Abs(gx), 0.7f);
+            gy = Mathf.Sign(gy) * Mathf.Pow(Mathf.Abs(gy), 0.7f);
+
+            inputX = Mathf.Clamp(gx * sensitivity, -1f, 1f);
+            inputZ = Mathf.Clamp(gy * sensitivity, -1f, 1f);
+
+
+
         }
         else
         {
-            // Fallback für Editor/PC
             inputX = Input.GetAxis("Vertical");
             inputZ = Input.GetAxis("Horizontal");
         }
@@ -57,14 +71,13 @@ public class BoardController : MonoBehaviour
 
         Quaternion targetRotation = initialRotation * Quaternion.Euler(targetX, 0f, targetZ);
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
-
-        // Optional: Kamera-Interaktion beibehalten
-        if (Camera.main != null && Camera.main.GetComponent<CameraController>() != null)
-        {
-            Camera.main.GetComponent<CameraController>().zRotation += inputZ;
-        }
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRotation,
+            rotationSpeed * Time.fixedDeltaTime
+        );
     }
+
 
     /// <summary>
     /// Wandelt Gyro-Koordinaten in Unitys Weltkoordinatensystem um.

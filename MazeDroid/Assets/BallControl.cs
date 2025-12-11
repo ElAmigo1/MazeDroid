@@ -52,15 +52,22 @@ public class BallRespawn : MonoBehaviour
                 Vector3 newPosition = transform.position;
                 newPosition.y = mapParent.position.y + surfaceOffset;
                 transform.position = newPosition;
+
             }
 
             // Tür einmal zerstören
             if (!doorDestroyed)
             {
                 GameObject door = GameObject.FindWithTag("Door1");
+                GameObject Cube = GameObject.FindWithTag("KnopfZone");
+
                 if (door != null)
+                {
                     Destroy(door);
+                    Destroy(Cube);
+                }
                 doorDestroyed = true;
+
             }
 
             // Neuen Ball am Spawnpoint erzeugen
