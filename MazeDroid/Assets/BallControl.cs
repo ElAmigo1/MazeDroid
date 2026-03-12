@@ -11,6 +11,7 @@ public class BallRespawn : MonoBehaviour
 
     private Rigidbody rb;
     private static bool doorDestroyed = false;
+    private static bool doorDestroyed2 = false;
     private bool hasTriggered = false;
 
     void Start()
@@ -56,6 +57,19 @@ public class BallRespawn : MonoBehaviour
             }
 
             // Tür einmal zerstören
+            if (!doorDestroyed2)
+            {
+                GameObject door2 = GameObject.FindWithTag("Door2");
+                GameObject Cube2 = GameObject.FindWithTag("KnopfZone");
+
+                if (door2 != null)
+                {
+                    Destroy(door2);
+                    Destroy(Cube2);
+                }
+                doorDestroyed = true;
+
+            }
             if (!doorDestroyed)
             {
                 GameObject door = GameObject.FindWithTag("Door1");
