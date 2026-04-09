@@ -1,20 +1,24 @@
-﻿ using UnityEngine;
+using UnityEngine;
 
 public class BoardController : MonoBehaviour
 {
+    public const string SensitivityPrefsKey = "GyroSensitivity";
+    public const float DefaultSensitivity = 1.5f;
+
     [Header("Rotation Settings")]
-    public float rotationSpeed = 5f;   // Sanfte Rotation
-    public float maxRotation = 10f;    // Maximalwinkel
+    public float rotationSpeed = 5f;
+    public float maxRotation = 10f;
 
     private Quaternion initialRotation;
     private bool useGyro = false;
     private Gyroscope gyro;
+    private float sensitivity;
 
     void Start()
     {
         initialRotation = transform.rotation;
+        sensitivity = PlayerPrefs.GetFloat(SensitivityPrefsKey, DefaultSensitivity);
 
-        // Rigidbody sicherstellen
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb == null)
             rb = gameObject.AddComponent<Rigidbody>();
@@ -22,7 +26,6 @@ public class BoardController : MonoBehaviour
         rb.isKinematic = true;
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-        // Gyro initialisieren
         if (SystemInfo.supportsGyroscope)
         {
             gyro = Input.gyro;
@@ -39,15 +42,9 @@ public class BoardController : MonoBehaviour
         {
             Vector3 g = Input.gyro.gravity;
 
-            float sensitivity = 1.5f;
-
-            // Landscape-Anpassung: Selfie-Kamera oben
-            // Links/Rechts Kippen -> Rotation um X-Achse
             float rotX = -g.y;
-            // Vorwärts/Rückwärts Kippen -> Rotation um Z-Achse
             float rotZ = g.x;
 
-            // Smooth nonlinear response
             rotX = Mathf.Sign(rotX) * Mathf.Pow(Mathf.Abs(rotX), 0.7f);
             rotZ = Mathf.Sign(rotZ) * Mathf.Pow(Mathf.Abs(rotZ), 0.7f);
 
@@ -71,8 +68,6 @@ public class BoardController : MonoBehaviour
             rotationSpeed * Time.fixedDeltaTime
         );
     }
-
-
 
     /// <summary>
     /// Wandelt Gyro-Koordinaten in Unitys Weltkoordinatensystem um.
