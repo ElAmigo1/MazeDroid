@@ -55,6 +55,7 @@ public class BallRespawn : MonoBehaviour
                 if (door != null) Destroy(door);
                 Destroy(other.gameObject);
                 doorDestroyed = true;
+                DoorCounter.Instance?.RegisterDoorOpened();
             }
 
             SpawnNewBall();
@@ -69,6 +70,7 @@ public class BallRespawn : MonoBehaviour
                 if (door2 != null) Destroy(door2);
                 Destroy(other.gameObject);
                 doorDestroyed2 = true;
+                DoorCounter.Instance?.RegisterDoorOpened();
             }
 
             SpawnNewBall();
