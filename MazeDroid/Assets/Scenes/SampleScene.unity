@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 105586196}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 6.25, y: -1.48, z: 9.48}
+  m_LocalPosition: {x: 6.25, y: -1.5, z: 9.48}
   m_LocalScale: {x: 6.77, y: 2.92, z: 8.203103}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2263,7 +2263,7 @@ Transform:
   m_GameObject: {fileID: 832575517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5324,8 +5324,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 1, z: 1}
+  m_Center: {x: -0.4999995, y: 0, z: 0}
 --- !u!1 &3721983983537678717 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4132007818829920672, guid: 81eb18c0d34235649b7e167a0a085e17,
@@ -5349,7 +5349,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mapParent
       value: 
-      objectReference: {fileID: 1724422040}
+      objectReference: {fileID: 2137899119}
     - target: {fileID: 5708724245495532417, guid: 81eb18c0d34235649b7e167a0a085e17,
         type: 3}
       propertyPath: ballPrefab
