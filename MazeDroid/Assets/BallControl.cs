@@ -1,78 +1,73 @@
-﻿using UnityEngine;
+using UnityEngine;
 
+/// <summary>
+/// Handles trigger detection, door destruction, and ball respawning.
+/// The ballPrefab field must point to the Ball prefab (Assets/Prefabs/Ball.prefab) —
+/// the complete ball with Rigidbody, SphereCollider, BallRespawn, and BallSkinApplier.
+/// The skin is re-applied automatically by BallSkinApplier.Start() using the saved PlayerPrefs index.
+/// </summary>
 public class BallRespawn : MonoBehaviour
 {
-    [Header("Spawn Settings")]
+    [Header("Ball Prefab")]
+    [Tooltip("Assign Assets/Prefabs/Ball.prefab — the full ball with all components, NOT a skin prefab.")]
     public GameObject ballPrefab;
+
+    [Header("Spawn Settings")]
     public Transform spawnPoint;
-    public Transform mapParent;
-    public float surfaceOffset = 0.5f;
-    public float followSpeed = 10f;
+
+    // Instance fields — NOT static. Static fields persist across play sessions and
+    // cause the second ball to spawn with stale door-destroyed state on re-runs.
+    [HideInInspector] public bool doorDestroyed = false;
+    [HideInInspector] public bool doorDestroyed2 = false;
 
     private Rigidbody rb;
-    private static bool doorDestroyed = false;
-    private static bool doorDestroyed2 = false;
     private bool hasTriggered = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
-    }
-
-    void FixedUpdate()
-    {
-        if (hasTriggered && mapParent != null)
+        if (rb == null)
         {
-            Vector3 targetPos = transform.position;
-            targetPos.y = mapParent.position.y + surfaceOffset;
-
-            rb.MovePosition(Vector3.Lerp(transform.position, targetPos, followSpeed * Time.fixedDeltaTime));
+            Debug.LogError("[BallRespawn] No Rigidbody on Ball!", gameObject);
+            return;
         }
+
+        // Unconditionally enable physics on every spawn — never rely on prefab defaults.
+        rb.isKinematic = false;
+        rb.useGravity = true;
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (hasTriggered) return;
 
-        // 🔵 KnopfZone → Door1
         if (other.CompareTag("KnopfZone"))
         {
             hasTriggered = true;
 
-            StopBall();
-
             if (!doorDestroyed)
             {
                 GameObject door = GameObject.FindWithTag("Door1");
-                if (door != null)
-                {
-                    Destroy(door);
-                    Destroy(other.gameObject);
-                }
+                if (door != null) Destroy(door);
+                Destroy(other.gameObject);
                 doorDestroyed = true;
             }
 
             SpawnNewBall();
         }
-
-        // 🔴 Knopf2 → Door2
         else if (other.CompareTag("Knopf2"))
         {
             hasTriggered = true;
 
-            StopBall();
-
             if (!doorDestroyed2)
             {
                 GameObject door2 = GameObject.FindWithTag("Door2");
-                if (door2 != null)
-                {
-                    Destroy(door2);
-                    Destroy(other.gameObject);
-                }
+                if (door2 != null) Destroy(door2);
+                Destroy(other.gameObject);
                 doorDestroyed2 = true;
             }
 
@@ -80,42 +75,49 @@ public class BallRespawn : MonoBehaviour
         }
     }
 
-    void StopBall()
+    private void SpawnNewBall()
     {
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        rb.isKinematic = true;
-
-        // 🔒 WICHTIG: nur in Scene erlauben
-        if (mapParent != null && gameObject.scene.isLoaded)
+        if (ballPrefab == null)
         {
-            transform.SetParent(mapParent);
-
-            Vector3 newPosition = transform.position;
-            newPosition.y = mapParent.position.y + surfaceOffset;
-            transform.position = newPosition;
+            Debug.LogError("[BallRespawn] ballPrefab is null — assign Assets/Prefabs/Ball.prefab in the Inspector!", gameObject);
+            return;
         }
-    }
-
-    // 🧱 Neuen Ball spawnen
-    void SpawnNewBall()
-    {
-        if (ballPrefab != null && spawnPoint != null)
+        if (spawnPoint == null)
         {
-            GameObject go = Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
-
-                // 👉 Referenzen nachträglich setzen
-                BallRespawn br = go.GetComponent<BallRespawn>();
-                br.mapParent = mapParent;
-                br.spawnPoint = spawnPoint;
-
-                // Camera update
-                Camera.main.GetComponent<CameraController>().ball = go;
-                Camera.main.GetComponent<CameraController>().zRotation = 0.0f;
+            Debug.LogError("[BallRespawn] spawnPoint is null!", gameObject);
+            return;
         }
-        else
+
+        Vector3 spawnPos = spawnPoint.position + Vector3.up * 1f;
+        GameObject newBall = Instantiate(ballPrefab, spawnPos, Quaternion.identity);
+
+        // Enforce physics before the new ball's Start() runs so no single frame is wrong.
+        Rigidbody newRb = newBall.GetComponent<Rigidbody>();
+        if (newRb != null)
         {
-            Debug.LogWarning("BallRespawn: BallPrefab oder SpawnPoint fehlt!");
+            newRb.isKinematic = false;
+            newRb.useGravity = true;
+            newRb.velocity = Vector3.zero;
+            newRb.angularVelocity = Vector3.zero;
+            newRb.interpolation = RigidbodyInterpolation.Interpolate;
+            newRb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
         }
+
+        // Forward door state and config to the new ball instance.
+        BallRespawn next = newBall.GetComponent<BallRespawn>();
+        if (next != null)
+        {
+            next.ballPrefab = ballPrefab;
+            next.spawnPoint = spawnPoint;
+            next.doorDestroyed = doorDestroyed;
+            next.doorDestroyed2 = doorDestroyed2;
+        }
+
+        // Point the camera at the new ball.
+        CameraController cam = Camera.main != null ? Camera.main.GetComponent<CameraController>() : null;
+        if (cam != null)
+            cam.ball = newBall;
+
+        Destroy(gameObject);
     }
 }

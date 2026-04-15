@@ -1,30 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     public GameObject ball;
-    public Vector3 offset;
-    public float zRotation;
-    public float followSpeed = 5f;  // Smooth Follow Geschwindigkeit
+    public Vector3 offset = new Vector3(0f, 5f, -8f);
+    public float smoothSpeed = 5f;
+
+    private Quaternion fixedRotation;
 
     void Start()
     {
-        // Startposition setzen
-        transform.position = ball.transform.position + offset;
-        transform.rotation = Quaternion.Euler(90f, 180f, -180f); // statische Rotation
+        fixedRotation = transform.rotation;
     }
 
     void LateUpdate()
     {
-        // Zielposition nur für X, Y, Z (Offset vom Ball)
-        Vector3 targetPosition = ball.transform.position + offset;
+        if (ball == null) return;
 
-        // Smooth Follow (ohne Rotation um den Ball)
-        transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
+        Vector3 desiredPosition = ball.transform.position + offset;
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
 
-        // Kamera bleibt statisch orientiert
-        // transform.rotation wird hier nicht verändert
+        transform.rotation = fixedRotation;
     }
 }

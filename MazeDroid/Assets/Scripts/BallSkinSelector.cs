@@ -28,6 +28,7 @@ public class BallSkinSelector : MonoBehaviour
 
     void Start()
     {
+
         currentIndex = BallSkinManager.GetSkinIndex();
         RefreshPreview();
     }
