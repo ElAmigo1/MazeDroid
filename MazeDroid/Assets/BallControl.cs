@@ -67,7 +67,8 @@ public class BallRespawn : MonoBehaviour
                     Destroy(door2);
                     Destroy(Cube2);
                 }
-                doorDestroyed = true;
+                doorDestroyed2 =true ;
+                
 
             }
             if (!doorDestroyed)
