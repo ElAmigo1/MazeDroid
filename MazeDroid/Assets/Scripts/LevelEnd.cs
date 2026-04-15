@@ -2,7 +2,7 @@ using UnityEngine;
 
 /// <summary>
 /// Place on a trigger collider at the end zone.
-/// When the Ball tag enters, it shows the Well Done screen.
+/// When the Ball tag enters, shows the Well Done screen and stops the trial timer if present.
 /// </summary>
 public class LevelEnd : MonoBehaviour
 {
@@ -14,6 +14,11 @@ public class LevelEnd : MonoBehaviour
         if (!other.CompareTag("Ball")) return;
 
         triggered = true;
+
+        // Stop the trial timer if this is Trial Mode.
+        TrialTimer timer = FindObjectOfType<TrialTimer>();
+        if (timer != null)
+            timer.StopTimer();
 
         WellDoneScreen screen = FindObjectOfType<WellDoneScreen>(true);
         if (screen != null)
