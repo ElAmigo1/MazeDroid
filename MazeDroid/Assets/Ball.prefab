@@ -147,9 +147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8b6adf47d706e4398808f4dbc5581f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 0}
+  ballPrefab: {fileID: 4132007818829920672, guid: 81eb18c0d34235649b7e167a0a085e17,
+    type: 3}
   spawnPoint: {fileID: 0}
-  mapParent: {fileID: 0}
+  mapParent: {fileID: -8679921383154817045, guid: 7804be6e968e59b42b8f2be9693a6107,
+    type: 3}
   surfaceOffset: 0.5
   followSpeed: 10
 --- !u!114 &5205877814480087043

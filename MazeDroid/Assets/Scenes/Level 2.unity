@@ -379,6 +379,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "T\xFCr"
       objectReference: {fileID: 0}
+    - target: {fileID: 2458766294865474974, guid: d2ee86320891d48489171eb7936504e1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door2
+      objectReference: {fileID: 0}
     - target: {fileID: 6044416506116314304, guid: d2ee86320891d48489171eb7936504e1,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1341,7 +1346,7 @@ PrefabInstance:
     - target: {fileID: 2458766294865474974, guid: d2ee86320891d48489171eb7936504e1,
         type: 3}
       propertyPath: m_TagString
-      value: Door2
+      value: Door1
       objectReference: {fileID: 0}
     - target: {fileID: 6044416506116314304, guid: d2ee86320891d48489171eb7936504e1,
         type: 3}
@@ -2375,7 +2380,7 @@ GameObject:
   - component: {fileID: 2014903305}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: KnopfZone
+  m_TagString: Knopf2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
