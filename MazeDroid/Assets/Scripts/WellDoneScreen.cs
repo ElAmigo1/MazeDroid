@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Controls the Well Done overlay shown when the ball reaches the level end zone.
-/// The Canvas GameObject starts inactive in the scene. Show() activates it.
+/// The Canvas GameObject starts inactive in the scene. Show() activates it,
+/// freezes time so the ball stops, and wires up the navigation buttons.
 /// </summary>
 public class WellDoneScreen : MonoBehaviour
 {
@@ -18,9 +19,10 @@ public class WellDoneScreen : MonoBehaviour
 
     private bool listenersAdded = false;
 
-    /// <summary>Activates the Well Done screen. Does NOT freeze time so button clicks remain responsive.</summary>
+    /// <summary>Activates the Well Done screen, stops the ball and wires button listeners.</summary>
     public void Show()
     {
+        // Wire buttons once — persistent calls are intentionally empty so only this listener fires.
         if (!listenersAdded)
         {
             listenersAdded = true;
@@ -29,6 +31,11 @@ public class WellDoneScreen : MonoBehaviour
             if (mainMenuButton != null)
                 mainMenuButton.onClick.AddListener(OnMainMenu);
         }
+
+        // Disable board input so the ball cannot move while the overlay is visible.
+        BoardController board = FindObjectOfType<BoardController>();
+        if (board != null)
+            board.enabled = false;
 
         gameObject.SetActive(true);
     }
@@ -43,5 +50,11 @@ public class WellDoneScreen : MonoBehaviour
         SceneManager.LoadScene(mainMenuScene);
     }
 
-    private void OnDestroy() { }
+    private void OnDestroy()
+    {
+        // Re-enable input if this screen is destroyed without navigating away (e.g. editor).
+        BoardController board = FindObjectOfType<BoardController>();
+        if (board != null)
+            board.enabled = true;
+    }
 }
