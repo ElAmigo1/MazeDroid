@@ -18,7 +18,7 @@ public class WellDoneScreen : MonoBehaviour
 
     private bool listenersAdded = false;
 
-    /// <summary>Activates the Well Done screen and freezes time.</summary>
+    /// <summary>Activates the Well Done screen. Does NOT freeze time so button clicks remain responsive.</summary>
     public void Show()
     {
         if (!listenersAdded)
@@ -31,23 +31,17 @@ public class WellDoneScreen : MonoBehaviour
         }
 
         gameObject.SetActive(true);
-        Time.timeScale = 0f;
     }
 
     private void OnPlayAgain()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(playAgainScene);
     }
 
     private void OnMainMenu()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuScene);
     }
 
-    private void OnDestroy()
-    {
-        Time.timeScale = 1f;
-    }
+    private void OnDestroy() { }
 }
