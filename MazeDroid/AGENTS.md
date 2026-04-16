@@ -2,7 +2,7 @@
 - Project name: MazeDroid
 - Unity version: Unity 2022.3.50f1
 - Active game object:
-  - Name: PauseCanvas
+  - Name: TimeTrial
   - Tag: Untagged
-  - Layer: Default
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
